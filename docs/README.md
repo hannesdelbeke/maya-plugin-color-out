@@ -2,7 +2,7 @@
 
 ## Maya stdout syntax highlight
 
-![demo](docs/images/demo.gif)
+![demo](images/demo.gif)
 
 ## Features
 

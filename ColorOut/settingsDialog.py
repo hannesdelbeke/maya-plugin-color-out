@@ -1,23 +1,19 @@
 import os
 import json
-from PySide2 import QtCore
-from PySide2 import QtGui
-from PySide2 import QtWidgets
+from PySide2 import QtCore, QtGui, QtWidgets
 import pymel.core as pm
 import pymel.api as pma
 from shiboken2 import wrapInstance
-from ColorOut import __author__
-from ColorOut import __version__
+from ColorOut import __author__, __version__, syntax
 from ColorOut.loggingFn import Logger
-from ColorOut import syntax
 
 
 def mayaMainWindow():
     mainWindowPtr = pma.MQtUtil.mainWindow()
     if mainWindowPtr:
-        return wrapInstance(long(mainWindowPtr), QtWidgets.QWidget)
-    else:
-        mayaMainWindow()
+        return wrapInstance(int(mainWindowPtr), QtWidgets.QWidget)
+    # else:
+    #     mayaMainWindow()
 
 
 class Dialog(QtWidgets.QDialog):
@@ -177,7 +173,7 @@ class Dialog(QtWidgets.QDialog):
 
     @QtCore.Slot()
     def toggle_save_button(self, state):
-        if isinstance(state, basestring):
+        if isinstance(state, str):  # basestring in python2
             state = bool(state)
         else:
             state = True
@@ -318,12 +314,12 @@ class ColorButton(QtWidgets.QLabel):
             self.select_color()
 
 
-if __name__ == "__main__":
-    try:
-        testTool.close()
-        testTool.deleteLater()
-    except BaseException:
-        pass
-
-    testTool = Dialog()
-    testTool.show()
+# if __name__ == "__main__":
+#     try:
+#         testTool.close()
+#         testTool.deleteLater()
+#     except BaseException:
+#         pass
+#
+#     testTool = Dialog()
+#     testTool.show()
