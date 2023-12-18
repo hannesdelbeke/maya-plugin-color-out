@@ -1,0 +1,38 @@
+{
+    "info": {
+        "pattern": ".*(info|INFO|NOTE).+$", 
+        "fg_color": [
+            135, 
+            206, 
+            250
+        ], 
+        "bg_color": []
+    }, 
+    "debug": {
+        "pattern": ".*(debug|DEBUG).+$", 
+        "fg_color": [
+            85, 
+            255, 
+            127
+        ], 
+        "bg_color": []
+    }, 
+    "warning": {
+        "pattern": ".*(warning|WARNING|Warning).+$", 
+        "fg_color": [
+            255, 
+            175, 
+            44
+        ], 
+        "bg_color": []
+    }, 
+    "error": {
+        "pattern": ".*(error|ERROR|Error|CRITICAL).+$", 
+        "fg_color": [
+            240, 
+            128, 
+            128
+        ], 
+        "bg_color": []
+    }
+}
