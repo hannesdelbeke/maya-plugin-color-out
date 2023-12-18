@@ -1,3 +1,5 @@
+# WORK IN PROGRESS - DOES NOT WORK YET !!!
+
 # ColorOut
 
 ## Maya stdout syntax highlight
